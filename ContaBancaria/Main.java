@@ -1,28 +1,45 @@
+import java.util.Scanner;
+
 public class Main {
   public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
     Contab conta = new Contab();
 
-    conta.setTitular("Rayaty");
-    conta.setLimite(500.0);
+    // Leitura dos dados iniciais da conta
+    System.out.print("Digite o nome do titular: ");
+    String titular = scanner.nextLine();
+    conta.setTitular(titular);
 
+    System.out.print("Digite o valor do limite: R$ ");
+    double limite = scanner.nextDouble();
+    conta.setLimite(limite);
+
+    // Exibição dos dados iniciais
+    System.out.println("\n--- Dados da Conta ---");
     System.out.println("Titular: " + conta.getTitular());
     System.out.println("Saldo Inicial: R$ " + conta.getSaldo());
     System.out.println("Limite: R$ " + conta.getLimite());
 
-
-    System.out.println("\n Testando Depósito ");
-    conta.depositar(200.0);
+    // Testando Depósito
+    System.out.println("\n--- Depósito ---");
+    System.out.print("Digite o valor para depósito: R$ ");
+    double valorDeposito = scanner.nextDouble();
+    conta.depositar(valorDeposito);
     System.out.println("Saldo atual: R$ " + conta.getSaldo());
 
-    System.out.println("\n Testando Saque dentro do Saldo ");
-    conta.sacar(50.0);
+    // Testando Saques
+    System.out.println("\n--- Saque 1 ---");
+    System.out.print("Digite o valor do primeiro saque: R$ ");
+    double valorSaque1 = scanner.nextDouble();
+    conta.sacar(valorSaque1);
     System.out.println("Saldo atual: R$ " + conta.getSaldo());
 
-    System.out.println("\n Testando Saque usando o Limite ");
-    conta.sacar(300.0);
+    System.out.println("\n--- Saque 2 ---");
+    System.out.print("Digite o valor do segundo saque: R$ ");
+    double valorSaque2 = scanner.nextDouble();
+    conta.sacar(valorSaque2);
     System.out.println("Saldo atual: R$ " + conta.getSaldo());
 
-    System.out.println("\n Testando Saque com Saldo/Limite Insuficientes ");
-    conta.sacar(1000.0);
+    scanner.close();
   }
 }
