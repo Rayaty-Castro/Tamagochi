@@ -40,6 +40,8 @@ public class Contab {
         } else if (valor <= (saldo + limite)) {
             this.saldo -= valor;
             System.out.println("Saldo e limite insuficientes para realizar o saque.");
+        } else {
+            System.out.println("Saldo e limite insuficientes para realizar o saque.");
         }
     }
 }
