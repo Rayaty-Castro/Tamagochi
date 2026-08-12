@@ -3,11 +3,12 @@ public class Main {
     Contab conta = new Contab();
 
     conta.setTitular("Rayaty");
-    conta.setLimite(700.0);
+    conta.setLimite(500.0);
 
     System.out.println("Titular: " + conta.getTitular());
     System.out.println("Saldo Inicial: R$ " + conta.getSaldo());
     System.out.println("Limite: R$ " + conta.getLimite());
+
 
     System.out.println("\n Testando Depósito ");
     conta.depositar(200.0);

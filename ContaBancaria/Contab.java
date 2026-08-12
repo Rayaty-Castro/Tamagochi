@@ -39,8 +39,6 @@ public class Contab {
             System.out.println("O valor do saque deve ser maior que 0.");
         } else if (valor <= (saldo + limite)) {
             this.saldo -= valor;
-            System.out.println("Saque realizado com sucesso!");
-        } else {
             System.out.println("Saldo e limite insuficientes para realizar o saque.");
         }
     }
