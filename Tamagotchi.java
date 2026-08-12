@@ -24,9 +24,9 @@ public class Tamagotchi {
     }
 
     public int getFome(){
-        if (fome == 100){
+        if (fome == 0){
             System.out.print("Saciado! fome: ");
-        } else if (fome == 0) {
+        } else if (fome == 100) {
             System.out.print("Faminto! fome: ");
         } else {
             System.out.print("Fome: ");
