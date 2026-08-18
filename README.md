@@ -1,2 +1,2 @@
 # Encapsulamento
-Atividades de backend 11/08
+Atividades de backend sobre encapsulamento
